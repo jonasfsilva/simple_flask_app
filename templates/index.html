@@ -42,10 +42,30 @@
             'password': password.value
         }
 
-        $.post("http://inovacad.herokuapp.com/api-token-auth/", function(data, status){
-            alert("Data: " + data + "\nStatus: " + status);
+        // $.post("http://inovacad.herokuapp.com/api-token-auth/", function(data, status){
+        //     alert("Data: " + data + "\nStatus: " + status);
+        // });
+        // console.log(data)
+        
+        $.ajaxSetup({
+            type: "POST",
+            data: data,
+            dataType: 'json',
+            xhrFields: {
+            withCredentials: true
+            },
+            crossDomain: true
         });
-        console.log(data)
+
+
+    //     xhrFields: {
+    // // The 'xhrFields' property sets additional fields on the XMLHttpRequest.
+    // // This can be used to set the 'withCredentials' property.
+    // // Set the value to 'true' if you'd like to pass cookies to the server.
+    // // If this is enabled, your server must respond with the header
+    // // 'Access-Control-Allow-Credentials: true'.
+    //         withCredentials: false
+    //     },
 
     }
 
