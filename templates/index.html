@@ -42,20 +42,20 @@
             'password': password.value
         }
 
-        // $.post("http://inovacad.herokuapp.com/api-token-auth/", function(data, status){
-        //     alert("Data: " + data + "\nStatus: " + status);
-        // });
-        // console.log(data)
-        
-        $.ajaxSetup({
-            type: "POST",
-            data: data,
-            dataType: 'json',
-            xhrFields: {
-            withCredentials: true
-            },
-            crossDomain: true
+        $.post("http://inovacad.herokuapp.com/api-token-auth/", function(data, status){
+            alert("Data: " + data + "\nStatus: " + status);
         });
+        console.log(data)
+        
+        // $.ajaxSetup({
+        //     type: "POST",
+        //     data: data,
+        //     dataType: 'json',
+        //     xhrFields: {
+        //     withCredentials: true
+        //     },
+        //     crossDomain: true
+        // });
 
 
     //     xhrFields: {
